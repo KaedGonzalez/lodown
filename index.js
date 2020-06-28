@@ -206,7 +206,8 @@ module.exports.unique = unique;
  * 
  * @param {Array} arr: the array to be iterated over and whose elements will undergo the test func
  * 
- * @param {Function} func: the test function that will be executed on each element of the passed in array
+ * @param {Function} func: The function takes in
+ * the element, index and array. It will then return all that pass the test in a new array.
  * 
  * @return {Array}: an array of all elements that passed the test function
  * 
@@ -229,7 +230,7 @@ module.exports.filter = filter;
  *  array value as the argument.
  * 
  * @param {Array} arr: Given array to test each value with the given function
- * @param {Function} f: This function will test each value of the array and return a Boolean value
+ * @param {Function} func: function that takes an element, index, or array and runs a test
  * 
  * @return {Array}: If the return from the Function is False it will add the array value to a new array
  */
@@ -251,7 +252,8 @@ module.exports.reject = reject;
  * 
  * @param {Array} arr: the array to be iterated over and whose elements will undergo the test func
  * 
- * @param {Function} func: the test function that will be executed on each element of the passed in array
+ * @param {Function} func: a test to run on the array. It takes in the arguments of the element, index
+ * and the array.
  * 
  * @return {Array}: an array of two subarrays, the first of which contains all passed elements from arr, and the second which contains all failed elements from arr
  * 
@@ -319,8 +321,9 @@ module.exports.pluck = pluck;
  * 
  * @param {Function} func: the function to be invoked on all elements from passed in <collection>
  * 
- * @return {Boolean}: returns true if every element passes test, and returns false otherwise
- * 
+ * @return {boolean}: a true or false value depending on if every test passed, if one test fails
+ * return false. If a function isn't supplied or doesn’t return a boolean vlaue then it will
+ * check to see if all values are truthy, if one is falsly then it will return false.
  */
  
  function every(collection, func) {
@@ -366,8 +369,9 @@ module.exports.every = every;
  * 
  * @param {Function} func: a test function that will test each element in the <collection>, looking for a true value
  * 
- * @return {Boolean}: returns true if at least one element of <collection> returns true when passed into <func>; returns false if all elements return false when passed into <func>
- * 
+ * @return {boolean}: a true or false value depending on if every test passed, if one test fails
+ * return false. If a function isn't supplied or doesn’t return a boolean vlaue then it will
+ * check to see if all values are truthy, if one is falsly then it will return false.
  */
  
  function some(collection, func) {
