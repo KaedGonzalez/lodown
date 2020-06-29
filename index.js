@@ -157,7 +157,7 @@ module.exports.indexOf = indexOf;
 /**
  * contains: Designed to return a boolean value if a value is in an array.
  * 
- * @param {Array} array: To loop through.
+ * @param {arr} array: To loop through.
  * @param {*} val: compares to the array element
  * 
  * @return {boolean} boolean: true if value is equal to an element in the array.
@@ -182,18 +182,18 @@ module.exports.contains = contains;
 /**
  * unique: Returns a new array w/o duplicates from a given array
  * 
- * @param {Array} arr: Array to remove duplicates
+ * @param {arr} array: Array to remove duplicates
  * 
- * @return {Array}: Returns a new array w/o the duplicates from the 
+ * @return {array}: Returns a new array w/o the duplicates from the 
  *  original array
  */
 
- function unique(array){
+ function unique(arr){
     const arrNonDup = [];
     
-    for (let i = 0; i < array.length; i++){
-        if (!arrNonDup.includes(array[i])){
-            arrNonDup.push(array[i]);
+    for (let i = 0; i < arr.length; i++){
+        if (!arrNonDup.includes(arr[i])){
+            arrNonDup.push(arr[i]);
         }
     } 
     return arrNonDup;
@@ -270,7 +270,7 @@ module.exports.partition = partition;
  * 
  * @param {Array/Object} collection: Array/Object to iterate and use as arguements for a given function
  * 
- * @param {Function} f: The function will return a value to be stored in a new array using the
+ * @param {Function} func: The function will return a value to be stored in a new array using the
  *  provided Array/Object
  * 
  * @return {Array}: This array will contain all of the values returned from the Function using 
