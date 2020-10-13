@@ -1,0 +1,29 @@
+{
+  "name": "lodown-kaedgonzalez",
+  "version": "1.0.0",
+  "description": "new lodown",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "istanbul cover _mocha -- test/ -R spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaedGonzalez/lodown.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KaedGonzalez/lodown/issues"
+  },
+  "homepage": "https://github.com/KaedGonzalez/lodown#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "i": "^0.3.6",
+    "istanbul": "^0.4.5",
+    "mocha": "^8.1.3",
+    "sinon": "^9.2.0"
+  }
+}
